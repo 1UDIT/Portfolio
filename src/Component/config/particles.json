@@ -2,7 +2,7 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#000000"
+      "value": "#fff"
     },
     "image": "",
     "position": "",
@@ -195,7 +195,7 @@
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#000000"
     },
     "shape": {
       "type": "circle",

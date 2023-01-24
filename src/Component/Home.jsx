@@ -1,29 +1,31 @@
-import Particles from "react-tsparticles"
-import { loadFull } from "tsparticles"
-import { useCallback } from "react"
-import particles from "./config/particles.json";
 import { Slide } from "react-awesome-reveal";
 import ParticlesBackground from "./ParticlesBackground ";
+import Skill from "./Skill";
+import Typewriter from "typewriter-effect";
+import { useState, useEffect } from "react";
+import MagnetMouse from 'magnet-mouse';
 
-const Particle = () => {
-  const particlesInit = useCallback(async (engine) => {
-    //console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(engine);
-  }, []);
+const Home = () => {
 
-  const particlesLoaded = useCallback(async (container) => {
-    // console.log(container);
-  }, []);
+  useEffect(() => {
+
+    let mm = new MagnetMouse({
+      magnet: {
+        element: '.magnet',
+        class: 'follow-mouse-active'
+      }
+    });
+    mm.init();
+    window.dispatchEvent(new Event('resize'))
+  }, [])
+
   return (
     <>
-      <section >
-       <ParticlesBackground/>
+      <section style={{ position: "relative", paddingBottom: "100px", height: '550px' }}>
+        <ParticlesBackground />
         <div className="container-fluid text-center">
           <div className="row">
-            <div className="col" style={{ color: "white", position: "relative", marginTop: "130px" }}>
+            <div className="col" style={{ position: "relative", marginTop: "130px", paddingLeft: "150px" }}>
               <Slide direction={'up'}>
                 <h1 className="heading">
                   Hi There!{" "}
@@ -34,42 +36,30 @@ const Particle = () => {
               </Slide>
               <Slide direction={'up'}>
                 <h1 className="heading-name">
-                  <span className="typewriter"></span>
+                  {/* <span className="typewriter"></span> */}
+                  <Typewriter
+                    options={{
+                      strings: [
+                        "Software Engineer",
+                        "Full Stack Developer",
+                      ],
+                      pauseFor: 1000,
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
                 </h1>
               </Slide>
-              <div style={{ padding: 50, textAlign: "left" }}>
-
-              </div>
+            </div>
+            <div className="col" style={{ position: "relative", marginTop: "130px" }}>
+              <img src={process.env.PUBLIC_URL + "/userIcon.png"} height="250" className="imgUser magnet" />
             </div>
           </div>
         </div>
       </section>
-      <section >
-        <div className="container-fluid text-center">
-          <div className="row">
-            <div className="col" style={{ color: "white", position: "relative", marginTop: "130px" }}>
-              <Slide direction={'up'}>
-                <h1 className="heading">
-                  Hi There!{" "}
-                  <span className="wave" role="img" aria-labelledby="wave">
-                    👋🏻
-                  </span>
-                </h1>
-              </Slide>
-              <Slide direction={'up'}>
-                <h1 className="heading-name">
-                  <span className="typewriter"></span>
-                </h1>
-              </Slide>
-              <div style={{ padding: 50, textAlign: "left" }}>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Skill />
     </>
   );
 };
 
-export default Particle
+export default Home;
