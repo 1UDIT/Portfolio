@@ -1,0 +1,42 @@
+.colorTechnologies > div:nth-child(1) > div:nth-child(1):hover {
+    color: yellow;
+    cursor: pointer;
+    background-color: black;
+}
+.colorTechnologies > div:nth-child(2) > div:nth-child(1):hover {
+    color: #00d8ff;
+    cursor: pointer;
+    background-color: black;
+}
+.colorTechnologies > div:nth-child(3) > div:nth-child(1):hover {
+    color: #7046b2;
+    cursor: pointer;
+    background-color: black;
+}
+.colorTechnologies > div:nth-child(4) > div:nth-child(1):hover {
+    color: #d84924;
+    cursor: pointer;
+    background-color: black;
+}
+.colorTechnologies > div:nth-child(5) > div:nth-child(1):hover {
+    color: #1577b4;
+    cursor: pointer;
+    background-color: black;
+}
+.colorTechnologies > div:nth-child(6) > div:nth-child(1):hover {
+    color: #309130;
+    cursor: pointer;
+    background-color: black;
+}
+.colorTechnologies > div:nth-child(7) > div:nth-child(1):hover {
+    color: yellow;
+    background-color: black;
+    cursor: pointer;
+}
+.colorTechnologies > div:nth-child(8) > div:nth-child(1):hover {
+    color: #4c8f45;
+    cursor: pointer;
+    background-color: black;
+}
+
+

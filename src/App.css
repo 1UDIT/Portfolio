@@ -222,6 +222,8 @@ h1 {
   backface-visibility: hidden;
   transition: all .5s ease;
 }
-.magnet-mouse-active {
-  background-color: #000000;
+.commonIcons {
+  font-size: 70px;
+  margin-bottom: 15px;
 }
+

@@ -1,13 +1,11 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-    let activeStyle = {
-        textDecoration: "underline",
-    };
+    
     return (
         <nav className="navbar navbar-expand-lg  navbar-inverse navbar-fixed-top bg-dark" data-bs-theme="dark">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Port</a>
+                <NavLink className="navbar-brand" to="/home">Port</NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

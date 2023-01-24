@@ -3,9 +3,9 @@ import Home from './Component/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Navbar from './Component/Navbar';
-import { Routes, BrowserRouter, Route } from "react-router-dom"
+import { Routes,  Route } from "react-router-dom"
 import Project from './Component/Project';
-import Skill from './Component/Skill';
+import Skill from './Component/Skill/Skill';
 
 function App() {
   return (

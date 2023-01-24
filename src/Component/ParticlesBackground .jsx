@@ -1,11 +1,9 @@
 import particles from "./config/particles.json";
 import Particles from "react-tsparticles"
 import { loadFull } from "tsparticles"
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback } from "react"
 
 const ParticlesBackground = () => {
-  const [loaded, setLoaded] = useState(false);
-  const myRef = useRef();
   const particlesInit = useCallback(async (engine) => {
     //console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
