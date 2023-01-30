@@ -202,12 +202,28 @@ h1 {
 }
 
 #particle_canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   z-index: -1;
 }
 
-.Image_icon:hover {
-  box-shadow: 10px 10px 5px #ccc;
+.imgUser:hover {
+  filter: drop-shadow(0 0 0.75rem crimson);
+}
+.magnet {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 100px;
+  color: white;  
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: all .5s ease;
+}
+.commonIcons {
+  font-size: 70px;
+  margin-bottom: 15px;
 }
 
-
-/**/

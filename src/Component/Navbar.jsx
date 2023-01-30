@@ -1,13 +1,12 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
-    let activeStyle = {
-        textDecoration: "underline",
-    };
+
     return (
-        <nav className="navbar navbar-expand-lg  navbar-inverse navbar-fixed-top bg-dark" data-bs-theme="dark">
+        <nav className="navbar navbar-expand-lg sticky-top  navbar-inverse navbar-fixed-top bg-dark" data-bs-theme="dark">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Port</a>
+                <NavLink className="navbar-brand" to="/home">Port</NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -25,13 +24,12 @@ const Navbar = () => {
                                 style={({ isActive }) =>
                                     isActive ? { textDecoration: "underline" } : {}
                                 }
-                                to="Project">About</NavLink>
+                                to="/home/#SkillDiv">About</NavLink>
                         </li>
                         <li className="nav-item" >
-                            <NavLink className="nav-link"
-                                style={({ isActive }) =>
-                                    isActive ? { textDecoration: "underline" } : {}
-                                } to="/Skill">Skill</NavLink>
+                            <HashLink className="nav-link"                         
+                                                          
+                                to="#SkillDiv">Skill</HashLink>
                         </li>
                         <li className="nav-item" >
                             <NavLink className="nav-link"
