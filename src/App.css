@@ -1,3 +1,13 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .wave {
   animation-name: wave-animation;
   animation-duration: 2.1s;
@@ -213,17 +223,29 @@ h1 {
 .imgUser:hover {
   filter: drop-shadow(0 0 0.75rem crimson);
 }
+
 .magnet {
   display: inline-block;
   padding: 20px;
   border-radius: 100px;
-  color: white;  
+  color: white;
   transform-style: preserve-3d;
   backface-visibility: hidden;
   transition: all .5s ease;
 }
+
 .commonIcons {
   font-size: 70px;
   margin-bottom: 15px;
 }
 
+.aboutPage {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+#SkillDiv {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  height: 100%
+}

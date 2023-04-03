@@ -6,7 +6,7 @@ import {
     FaNodeJs,
     FaCss3,
 } from 'react-icons/fa';
-import { SiRedux, SiMongodb, SiCsharp, SiPostgresql } from 'react-icons/si';
+import { SiRedux  } from 'react-icons/si';
 import "./Skill.css"
 
 const Skill = () => {
@@ -46,19 +46,19 @@ const Skill = () => {
             project_name: 'Express',
             project_desc: <FaNodeJs className='commonIcons' />,
         },
-        {
-            id: 7,
-            project_name: 'Mongo DB',
-            project_desc: <SiMongodb className='commonIcons' />,
-        },
+        // {
+        //     id: 7,
+        //     project_name: 'Mongo DB',
+        //     project_desc: <SiMongodb className='commonIcons' />,
+        // },
     ];
     return (
-        <section style={{ backgroundColor: "#dffaf0", color: "black", height: "100%" }} id="SkillDiv">
+        <section   id="SkillDiv">
             <div className="container-fluid text-center">
                 <h1 style={{ paddingTop: "10px",textAlign:"center" }}>TECHNOLOGY</h1>
                 <div className="row colorTechnologies">
                     {projects.map((item,index) => (
-                        <div className="col" style={{ marginTop: "130px", paddingLeft: "150px" }} key={index}>
+                        <div className="col-3" style={{ marginTop: "130px", paddingLeft: "150px" }} key={index}>
                             <div className="colorTechnologies">
                                 <Slide direction={'up'}>
                                     {item.project_desc}
@@ -70,14 +70,14 @@ const Skill = () => {
                         </div>
                     ))}
 
-                    <div className="col" style={{ position: "relative", marginTop: "130px" }}>
+                    {/* <div className="col" style={{ position: "relative", marginTop: "130px" }}>
                         <Slide direction={'up'}>
                             <h1 className="heading-name">
 
                             </h1>
                         </Slide>
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

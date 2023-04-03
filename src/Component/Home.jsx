@@ -2,11 +2,13 @@ import { Slide } from "react-awesome-reveal";
 import ParticlesBackground from "./ParticlesBackground ";
 import Skill from "./Skill/Skill";
 import Typewriter from "typewriter-effect";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import MagnetMouse from 'magnet-mouse';
+import Aboutme from "./AboutMe";
 
 const Home = () => {
 
+  
   useEffect(() => {
 
     let mm = new MagnetMouse({
@@ -21,14 +23,14 @@ const Home = () => {
 
   return (
     <>
-      <section style={{ position: "relative", paddingBottom: "100px", height: '580px' }}>
+      <section style={{ position: "relative", paddingBottom: "100px", height: '600px' }} id="Home">
         <ParticlesBackground />
         <div className="container-fluid text-center">
           <div className="row">
-            <div className="col" style={{ marginTop: "100px", paddingLeft: "150px",paddingRight:"100px" }}>
+            <div className="col" style={{ marginTop: "100px", paddingLeft: "150px", paddingRight: "100px" }}>
               <Slide direction={'up'}>
                 <h1 className="heading">
-                  Hi There!{" "}
+                  Hi There!{" "} I'm Udit Sharma
                   <span className="wave" role="img" aria-labelledby="wave">
                     👋🏻
                   </span>
@@ -41,7 +43,7 @@ const Home = () => {
                   options={{
                     strings: [
                       "Software Engineer",
-                      "Full Stack Developer",
+                      "Front-End Developer",
                     ],
                     pauseFor: 1000,
                     autoStart: true,
@@ -57,7 +59,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Skill />
+      <Aboutme/>
     </>
   );
 };
