@@ -4,7 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 const Navbar = () => {
    
     return (
-        <nav className="navbar navbar-expand-lg sticky-top  navbar-inverse navbar-fixed-top bg-dark" data-bs-theme="dark">
+        <nav className="navbar navbar-expand-lg sticky-top  navbar-inverse navbar-fixed-top navbar-dark bg-dark" data-bs-theme="dark">
             <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/home">
                     <span> &lt;</span>

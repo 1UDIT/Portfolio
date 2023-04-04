@@ -10,18 +10,18 @@ const Project = () => {
             id: 1,
             project_name: "restaurant",
             image:
-                "https://github.com/kavish729/PORTFOLIO/blob/main/public/ProjectImages/anthropology.png?raw=true",
+                "https://github.com/1UDIT/Portfolio/blob/Added-Project-list/Images/restaurant.png?raw=true",
             project_desc:
                 "This is an restaurant Demo website",
             deploy_link: "https://1udit.github.io/restauranDemo/#/",
             repo_link: "https://github.com/1UDIT/restauranDemo",
-            tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />, <FaReact /> ]
+            tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />, <FaReact />]
         },
         {
             id: 2,
             project_name: "Weather Info",
             image:
-                "https://github.com/kavish729/PORTFOLIO/blob/main/public/ProjectImages/Foodymoodyrestaurent.png?raw=true",
+                "https://github.com/1UDIT/Portfolio/blob/Added-Project-list/Images/WeatherInfo.png?raw=true",
             project_desc:
                 "This is an Weather Demo website",
             deploy_link: "https://1udit.github.io/weatherDisplay/",
@@ -50,7 +50,7 @@ const Project = () => {
                 // <FaJs />,
                 // <FaNodeJs />,
             ]
-        }       
+        }
     ];
     return (
         <>
@@ -66,8 +66,14 @@ const Project = () => {
                                         <h5 className="card-title">{item.project_name}</h5>
                                         <p className="card-text">{item.project_desc}</p>
                                         <p className="card-text">{item.tech_stack}</p>
-                                        <a href={item.repo_link} className="btn btn-primary">Code</a>
-                                        <a href={item.deploy_link} className="btn btn-primary">Demo</a>
+                                        <div className="row">
+                                            <div className="col-6" key={item.id} >
+                                                <a href={item.repo_link} className="btn btn-primary">Code</a>
+                                            </div>
+                                            <div className="col-6" key={item.id} >
+                                                <a href={item.deploy_link} className="btn btn-primary">Demo</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
