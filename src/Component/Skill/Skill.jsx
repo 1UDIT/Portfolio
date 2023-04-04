@@ -6,8 +6,9 @@ import {
     FaNodeJs,
     FaCss3,
 } from 'react-icons/fa';
-import { SiRedux  } from 'react-icons/si';
+import { SiRedux } from 'react-icons/si';
 import "./Skill.css"
+import Project from "../Project";
 
 const Skill = () => {
     const projects = [
@@ -53,24 +54,25 @@ const Skill = () => {
         // },
     ];
     return (
-        <section   id="SkillDiv">
-            <div className="container-fluid text-center">
-                <h1 style={{ paddingTop: "10px",textAlign:"center" }}>TECHNOLOGY</h1>
-                <div className="row colorTechnologies">
-                    {projects.map((item,index) => (
-                        <div className="col-3" style={{ marginTop: "130px", paddingLeft: "150px" }} key={index}>
-                            <div className="colorTechnologies">
-                                <Slide direction={'up'}>
-                                    {item.project_desc}
-                                    <h5 className="heading">
-                                        {item.project_name}
-                                    </h5>
-                                </Slide>
+        <>
+            <section id="SkillDiv">
+                <div className="container-fluid text-center">
+                    <h1 style={{ paddingTop: "10px", textAlign: "center" }}>TECHNOLOGY</h1>
+                    <div className="row colorTechnologies">
+                        {projects.map((item, index) => (
+                            <div className="col-3" style={{ marginTop: "130px", paddingLeft: "150px" }} key={index}>
+                                <div className="colorTechnologies">
+                                    <Slide direction={'up'}>
+                                        {item.project_desc}
+                                        <h5 className="heading">
+                                            {item.project_name}
+                                        </h5>
+                                    </Slide>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
 
-                    {/* <div className="col" style={{ position: "relative", marginTop: "130px" }}>
+                        {/* <div className="col" style={{ position: "relative", marginTop: "130px" }}>
                         <Slide direction={'up'}>
                             <h1 className="heading-name">
 
@@ -78,9 +80,11 @@ const Skill = () => {
                         </Slide>
 
                     </div> */}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <Project/>
+        </>
     )
 }
 export default Skill;

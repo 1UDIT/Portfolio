@@ -32,17 +32,9 @@ const Navbar = () => {
                                 to="#SkillDiv">Skill</HashLink>
                         </li>
                         <li className="nav-item" >
-                            <NavLink className="nav-link"
-                                style={({ isActive }) =>
-                                    isActive ? { textDecoration: "underline" } : {}
-                                } to="/Project">Project</NavLink>
+                            <HashLink className="nav-link" to="#Project">Project</HashLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link"
-                                style={({ isActive }) =>
-                                    isActive ? { textDecoration: "underline" } : {}
-                                } to="/Project">Contact</NavLink>
-                        </li>
+                        
                     </ul>
 
                 </div>
