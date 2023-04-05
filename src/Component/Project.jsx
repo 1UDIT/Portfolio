@@ -30,27 +30,20 @@ const Project = () => {
         },
         {
             id: 3,
-            project_name: "LinkedIn Learning",
+            project_name: "Iplaey",
             image:
                 "https://github.com/kavish729/PORTFOLIO/blob/main/public/ProjectImages/linkedin.png?raw=true",
             project_desc:
-                "LinkedIn Learning is an online educational platform that helps you discover and develop business, technology-related, and creative skills through expert-led course videos. With more than 5,000 courses and personalized recommendations, you can discover, complete, and track courses related to your field and interests..",
-            deploy_link: "https://projectlynda.netlify.app/",
-            repo_link: "https://github.com/ribhar/LinkedinLearning",
+                "mainly used in media houses for video Playout.",
+            
             tech_stack: [
                 <FaHtml5 />,
                 <FaCss3 />,
-                <FaJs />
-                // <FaReact />,
-                // <SiRedux />,
-                // <SiMaterialui />,
-                // <SiMongodb />,
-                // // <SiExpress />,
-                // <AiFillGithub />,
-                // <FaJs />,
-                // <FaNodeJs />,
+                <FaJs />,
+                <SiRedux/>                 
             ]
-        }
+        },
+         
     ];
     return (
         <>
