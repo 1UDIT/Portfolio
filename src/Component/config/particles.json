@@ -2,7 +2,7 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#fff"
+      "value": "#000"
     },
     "image": "",
     "position": "",
@@ -14,7 +14,7 @@
     "composite": "destination-out",
     "cover": {
       "color": {
-        "value": "#fff"
+        "value": "#000"
       },
       "opacity": 1
     },
@@ -132,7 +132,7 @@
         "quantity": 5,
         "particles": {
           "color": {
-            "value": "#ff0000",
+            "value": "#000",
             "animation": {
               "enable": true,
               "speed": 400,
@@ -195,7 +195,7 @@
       }
     },
     "color": {
-      "value": "#000000"
+      "value": "#fff"
     },
     "shape": {
       "type": "circle",
@@ -235,7 +235,7 @@
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#ffffff",
+      "color": "#000",
       "opacity": 0.4,
       "width": 1
     },

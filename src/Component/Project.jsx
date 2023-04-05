@@ -32,18 +32,18 @@ const Project = () => {
             id: 3,
             project_name: "Iplaey",
             image:
-                "https://github.com/kavish729/PORTFOLIO/blob/main/public/ProjectImages/linkedin.png?raw=true",
+                "https://github.com/1UDIT/Portfolio/blob/Added-Project-list/Images/Iplaey.png?raw=true",
             project_desc:
-                "mainly used in media houses for video Playout.",
-            
+                "video Playout System.",
+
             tech_stack: [
                 <FaHtml5 />,
                 <FaCss3 />,
                 <FaJs />,
-                <SiRedux/>                 
+                <SiRedux />
             ]
         },
-         
+
     ];
     return (
         <>
@@ -59,13 +59,14 @@ const Project = () => {
                                         <h5 className="card-title">{item.project_name}</h5>
                                         <p className="card-text">{item.project_desc}</p>
                                         <p className="card-text">{item.tech_stack}</p>
-                                        <div className="row">
-                                            <div className="col-6" key={item.id} >
+                                        <div className="row">     
+                                            <div className="col-6"   >
                                                 <a href={item.repo_link} className="btn btn-primary">Code</a>
                                             </div>
-                                            <div className="col-6" key={item.id} >
+                                            <div className="col-6"   >
                                                 <a href={item.deploy_link} className="btn btn-primary">Demo</a>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>

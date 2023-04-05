@@ -27,7 +27,7 @@ const Home = () => {
         <ParticlesBackground />
         <div className="container-fluid text-center">
           <div className="row">
-            <div className="col" style={{ marginTop: "100px", paddingLeft: "150px", paddingRight: "100px" }}>
+            <div className="col" style={{ marginTop: "100px", paddingLeft: "150px", paddingRight: "100px",color:"#fff" }}>
               <Slide direction={'up'}>
                 <h1 className="heading">
                   Hi There!{" "} I'm Udit Sharma
