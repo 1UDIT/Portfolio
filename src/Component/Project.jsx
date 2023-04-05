@@ -60,10 +60,10 @@ const Project = () => {
                                         <p className="card-text">{item.project_desc}</p>
                                         <p className="card-text">{item.tech_stack}</p>
                                         <div className="row">     
-                                            <div className="col-6"   >
+                                            <div className="col"   >
                                                 <a href={item.repo_link} className="btn btn-primary">Code</a>
                                             </div>
-                                            <div className="col-6"   >
+                                            <div className="col"   >
                                                 <a href={item.deploy_link} className="btn btn-primary">Demo</a>
                                             </div>
                                             

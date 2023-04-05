@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Skill from "./Skill/Skill";
 import MagnetMouse from 'magnet-mouse';
 import { Slide } from "react-awesome-reveal";
+import ParticlesBackground from "./ParticlesBackground ";
 
 const Aboutme = () => {
 
@@ -18,14 +19,15 @@ const Aboutme = () => {
 
     return (
         <>
-            <section className="aboutPage" id="About" style={{ position: "relative", paddingTop: "35px", height: '300px' }}>
+            <div className="container-fluid text-center aboutPage" id="About" style={{ position: "relative", paddingTop: "35px", height: '300px' }}>
+
                 <div className="row">
-                    <div className="col-4" style={{   marginRight: "20px" }}>
+                    <div className="col" style={{ marginRight: "20px" }}>
                         <img src={process.env.PUBLIC_URL + "/userIcon.png"} height="250" alt="iconUser" className="imgUser magnet" />
                     </div>
-                    <div className="col-7" style={{ marginTop: "10px" }}>
+                    <div className="col" style={{ marginTop: "10px" }}>
                         <Slide direction={'up'}>
-                            <h1 className="heading text-left">
+                            <h1 className="heading text-center">
                                 About me...
                             </h1>
                         </Slide>
@@ -35,7 +37,7 @@ const Aboutme = () => {
                             dynamic user experience.</p>
                     </div>
                 </div>
-            </section>
+            </div>
             <Skill />
         </>
     )
