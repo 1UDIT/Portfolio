@@ -19,7 +19,7 @@ const Aboutme = () => {
 
     return (
         <>
-            <div className="container-fluid text-center aboutPage" id="About" style={{ position: "relative", paddingTop: "35px", height: '300px' }}>
+            <div className="container-fluid text-center aboutPage" id="About" style={{ position: "relative", paddingTop: "35px"}}>
 
                 <div className="row">
                     <div className="col" style={{ marginRight: "20px" }}>

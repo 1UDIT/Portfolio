@@ -1,11 +1,11 @@
 * {
   margin: 0px;
   padding: 0px;
-
 }
 
 body {
   overflow-x: hidden;
+  background-color: #000000 !important;
 }
 
 .wave {
@@ -245,15 +245,29 @@ h1 {
 }
 
 #SkillDiv {
+  background-color: #121a25;
+  color: rgb(255, 255, 255);
+  height: 100%
+}
+
+.ProjectDetail {
   background-color: #000000;
   color: rgb(255, 255, 255);
   height: 100%
 }
-.ProjectDetail{
-  background-color: #000000;
-  color: rgb(255, 255, 255);
-  height: 100%
-}
-.navbar-toggler-icon  {
+
+.navbar-toggler-icon {
   color: rgb(255, 0, 0) !important;
-} 
+}
+
+.ContactUs_page {
+  background-color: #121a25;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  border-radius: 10px;
+}
+
+.text_style {
+  color: #fff;
+  text-align: justify;
+}

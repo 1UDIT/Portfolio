@@ -8,7 +8,7 @@ import Aboutme from "./AboutMe";
 
 const Home = () => {
 
-  
+
   useEffect(() => {
 
     let mm = new MagnetMouse({
@@ -22,12 +22,11 @@ const Home = () => {
   }, [])
 
   return (
-    <>
-      <section style={{ position: "relative", paddingBottom: "100px", height: '600px' }} id="Home">
+    <> 
+        <div className="container-fluid text-center" style={{ position: "relative", minHeight: '100%', height: "100vh" }} id="Home">
         <ParticlesBackground />
-        <div className="container-fluid text-center">
-          <div className="row">
-            <div className="col" style={{ marginTop: "100px", paddingLeft: "150px", paddingRight: "100px",color:"#fff" }}>
+          <div className="row" style={{ paddingTop: "150px", color: "#fff" }}>
+            <div className="col" >
               <Slide direction={'up'}>
                 <h1 className="heading">
                   Hi There!{" "} I'm Udit Sharma
@@ -53,13 +52,12 @@ const Home = () => {
                 </Slide> </h1>
 
             </div>
-            <div className="col" style={{ marginTop: "110px" }}>
+            <div className="col" style={{ marginTop: "10px" }}>
               <img src={process.env.PUBLIC_URL + "/userIcon.png"} height="250" alt="iconUser" className="imgUser magnet" />
             </div>
           </div>
-        </div>
-      </section>
-      <Aboutme/>
+        </div> 
+      <Aboutme />
     </>
   );
 };

@@ -57,10 +57,10 @@ const Skill = () => {
         <>
             <section id="SkillDiv">
                 <div className="container-fluid text-center">
-                    <h1 style={{ paddingTop: "10px", textAlign: "center" }}>TECHNOLOGY</h1>
+                    <h1 style={{ paddingTop: "40px", textAlign: "center" }}>TECHNOLOGY</h1>
                     <div className="row colorTechnologies">
                         {projects.map((item, index) => (
-                            <div className="col-3" style={{ marginTop: "130px", paddingLeft: "150px" }} key={index}>
+                            <div className="col-3" style={{ marginTop: "130px", paddingLeft: "10px" }} key={index}>
                                 <div className="colorTechnologies">
                                     <Slide direction={'up'}>
                                         {item.project_desc}
