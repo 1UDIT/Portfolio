@@ -247,7 +247,9 @@ h1 {
 #SkillDiv {
   background-color: #121a25;
   color: rgb(255, 255, 255);
-  height: 100%
+  height: 100%;
+  padding-top: 45px;
+  padding-bottom: 20px;
 }
 
 .ProjectDetail {

@@ -54,9 +54,8 @@ const Skill = () => {
         // },
     ];
     return (
-        <>
-            <section id="SkillDiv">
-                <div className="container-fluid text-center">
+        <> 
+                <div className="container-fluid text-center" id="SkillDiv">
                     <h1 style={{ paddingTop: "40px", textAlign: "center" }}>TECHNOLOGY</h1>
                     <div className="row colorTechnologies">
                         {projects.map((item, index) => (
@@ -81,8 +80,7 @@ const Skill = () => {
 
                     </div> */}
                     </div>
-                </div>
-            </section>
+                </div> 
             <Project/>
         </>
     )

@@ -50,7 +50,7 @@ const Project = () => {
     return (
         <>
             <div className="container-fluid text-center ProjectDetail" id="Project">
-                <h1 style={{ paddingTop: "40px", textAlign: "center" }}>Projects</h1>
+                <h1 style={{ paddingTop: "45px", textAlign: "center" }}>Projects</h1>
                 <div className="row">
                     {projects.map((item) => (
                         <div className="col-sm" style={{ paddingTop: "50px" }}>

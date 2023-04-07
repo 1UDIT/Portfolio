@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
@@ -6,11 +5,11 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg sticky-top  navbar-inverse navbar-fixed-top navbar-dark bg-dark" data-bs-theme="dark">
             <div className="container-fluid">
-                <NavLink className="navbar-brand" to="/home">
+                <HashLink className="navbar-brand" to="#Home">
                     <span> &lt;</span>
                     <span> Us </span>
                     <span> /&gt;</span>
-                    </NavLink>
+                    </HashLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -33,6 +32,9 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item" >
                             <HashLink className="nav-link" to="#Project">Project</HashLink>
+                        </li>
+                        <li className="nav-item" >
+                            <HashLink className="nav-link" to="#Contact">Contact</HashLink>
                         </li>
                         
                     </ul>
