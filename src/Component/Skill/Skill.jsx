@@ -6,6 +6,7 @@ import {
     FaNodeJs,
     FaCss3,
 } from 'react-icons/fa';
+import { GoFileCode } from "react-icons/go";
 import { SiRedux } from 'react-icons/si';
 import "./Skill.css"
 import Project from "../Project";
@@ -56,7 +57,16 @@ const Skill = () => {
     return (
         <> 
                 <div className="container-fluid text-center" id="SkillDiv">
-                    <h1 style={{ paddingTop: "40px", textAlign: "center" }}>TECHNOLOGY</h1>
+                <div className="row" style={{ color: "red" }}>
+                    <div className="col-5" style={{ textAlign: "right", display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+                        <GoFileCode style={{ fontSize: "25px" }} />
+                    </div>
+                    <div className="col-5" style={{ textAlign: "left" }}>
+                        <h2 className="heading">
+                            <span style={{ color: "white" }}>TECHNOLOGY</span>
+                        </h2>
+                    </div>
+                </div> 
                     <div className="row colorTechnologies">
                         {projects.map((item, index) => (
                             <div className="col-3" style={{ marginTop: "130px", paddingLeft: "10px" }} key={index}>

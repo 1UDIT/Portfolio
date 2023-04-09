@@ -1,9 +1,11 @@
 import { HashLink } from 'react-router-hash-link';
+import { AiTwotonePhone, AiOutlineMail } from "react-icons/ai";
+import { BsPinMap } from "react-icons/bs";
 
 const ContactUs = () => {
     return (
         <>
-            <div className="container-fluid text-center ContactUs_page p-4 mt-4" id="Contact">
+            <div className="container-fluid text-center ContactUs_page p-4" id="Contact">
                 <h1 style={{ paddingTop: "40px", textAlign: "center" }}></h1>
                 <div className="row">
                     <div className="col-sm-4 text_style">
@@ -43,11 +45,37 @@ const ContactUs = () => {
                     </div>
                     <div className="col-sm" style={{ textAlign: "left" }}>
                         <h4 >Contact Info</h4>
-                        <div>+91 XXX-XXX-XXXX</div>
+                        <div className="row">
+                            <div className="col-2" style={{ textAlign: "left",color: "red" }}>
+                                <AiTwotonePhone style={{ fontSize: "25px" }} />
+                            </div>
 
-                        <div>uditsharma7195@gmail.com</div>
-
-                        <div>New Delhi, India-110075</div>
+                            <div className="col" style={{ textAlign: "left" }}>
+                                <h6 className="heading">
+                                    <span style={{ color: "white" }}>+91 XXX-XXX-XXXX</span>
+                                </h6>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-2" style={{ textAlign: "left",color: "red" }}>
+                                <AiOutlineMail style={{ fontSize: "25px" }} />
+                            </div>
+                            <div className="col" style={{ textAlign: "left"  }}>
+                                <h6 className="heading">
+                                    <span style={{ color: "white" }}>uditsharma7195@gmail.com</span>
+                                </h6>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-2" style={{ textAlign: "left",color: "red" }}>
+                                <BsPinMap style={{ fontSize: "25px" }} />
+                            </div>
+                            <div className="col" style={{ textAlign: "left" }}>
+                                <h6 className="heading">
+                                    <span style={{ color: "white" }}>New Delhi, India-110075</span>
+                                </h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,13 @@
-import React from "react";
-import { FaGithub, FaLink, FaNodeJs } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaLaptopCode } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { FaHtml5, FaReact, FaJs, FaCss3 } from "react-icons/fa";
 import { SiMongodb, SiNodeDotJs, SiRedux, SiHeroku } from "react-icons/si";
 import ContactUs from "./ContactUs";
 
 const Project = () => {
+    const [buttonLeft, setButtonLeft] = useState({ display: 'none' });
+    const [buttonRight, setButtonRight] = useState({ display: 'none' });
     const projects = [
         {
             id: 1,
@@ -36,7 +38,8 @@ const Project = () => {
                 "https://github.com/1UDIT/Portfolio/blob/Added-Project-list/Images/Iplaey.png?raw=true",
             project_desc:
                 "video Playout System.",
-
+            deploy_link: null,
+            repo_link: null,
             tech_stack: [
                 <FaHtml5 />,
                 <FaCss3 />,
@@ -49,31 +52,42 @@ const Project = () => {
     ];
     return (
         <>
-            <div className="container-fluid text-center ProjectDetail" id="Project">
-                <h1 style={{ paddingTop: "45px", textAlign: "center" }}>Projects</h1>
+            <div className="container-fluid text-center ProjectDetail p-4" id="Project">
+                <div className="row" style={{ color: "red" }}>
+                    <div className="col-5" style={{ textAlign: "right", display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+                        <FaLaptopCode style={{ fontSize: "25px" }} />
+                    </div>
+                    <div className="col-5" style={{ textAlign: "left" }}>
+                        <h2 className="heading">
+                            <span style={{ color: "white" }}>Projects</span>
+                        </h2>
+                    </div>
+                </div>
                 <div className="row">
                     {projects.map((item) => (
                         <div className="col-sm" style={{ paddingTop: "50px" }}>
+
                             <div className="card" style={{ width: "100%", height: "100%" }} key={item.id}>
                                 <img src={item.image} alt="icon" style={{ width: "100%" }} />
-                                <div className="card-body" style={{ color: "black" }}>
-                                    <h5 className="card-title">{item.project_name}</h5>
-                                    <p className="card-text">{item.project_desc}</p>
-                                    <p className="card-text">{item.tech_stack}</p>
-                                    <div className="row">
+                                <div className="card-body" style={{ color: "black" }} >
+
+                                    <h5 className="card-title"> {item.project_name}</h5>
+                                    <p className="card-text"  >{item.project_desc}</p>
+                                    <p className="card-text" >{item.tech_stack}</p>
+                                    {item.repo_link === null ? null : <div className="row" style={{ position: "absolute", bottom: "0px", left: "0px", right: "0px" }}>
                                         <div className="col"   >
                                             <a href={item.repo_link} className="btn btn-primary">Code</a>
                                         </div>
                                         <div className="col"   >
                                             <a href={item.deploy_link} className="btn btn-primary">Demo</a>
                                         </div>
-                                    </div>
+                                    </div>}
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
-            </div>
+            </div >
             <ContactUs />
         </>
     )
