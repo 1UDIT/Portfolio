@@ -58,7 +58,7 @@ const Skill = () => {
         <> 
                 <div className="container-fluid text-center" id="SkillDiv">
                 <div className="row" style={{ color: "red" }}>
-                    <div className="col-5" style={{ textAlign: "right", display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+                    <div className="col-5" style={{ textAlign: "right",display:"inline-flex",justifyContent:"flex-end",alignItems:"center" }}>
                         <GoFileCode style={{ fontSize: "25px" }} />
                     </div>
                     <div className="col-5" style={{ textAlign: "left" }}>
@@ -69,7 +69,7 @@ const Skill = () => {
                 </div> 
                     <div className="row colorTechnologies">
                         {projects.map((item, index) => (
-                            <div className="col-3" style={{ marginTop: "130px", paddingLeft: "10px" }} key={index}>
+                            <div className="col-4" style={{ marginTop: "130px", paddingLeft: "10px" }} key={index}>
                                 <div className="colorTechnologies">
                                     <Slide direction={'up'}>
                                         {item.project_desc}

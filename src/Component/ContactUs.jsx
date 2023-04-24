@@ -10,9 +10,7 @@ const ContactUs = () => {
                 <div className="row">
                     <div className="col-sm-4 text_style">
                         <h4 style={{ textAlign: "left" }}>Portfolio</h4>
-                        <p>Thank you for visiting my personal portfolio website. Connect with me over socials.
-
-                            Keep Rising 🚀. Connect with me over live chat!</p>
+                        <p>Thank you for visiting my personal portfolio website.</p>
                     </div>
                     <div className="col-sm">
                         <ul className="navbar-nav" style={{
