@@ -16,8 +16,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <HashLink className="nav-link "
-                                 
+                            <HashLink className="nav-link " 
                                 to="#Home">Home</HashLink>
                         </li>
                         <li className="nav-item">

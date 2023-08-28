@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaLaptopCode } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
-import { FaHtml5, FaReact, FaJs, FaCss3,FaNext } from "react-icons/fa";
+import { FaHtml5, FaReact, FaJs, FaCss3, FaNext } from "react-icons/fa";
 import { SiMongodb, SiNodeDotJs, SiRedux, SiNextdotjs } from "react-icons/si";
 import ContactUs from "./ContactUs";
 
@@ -52,7 +52,7 @@ const Project = () => {
             id: 4,
             project_name: "News Website ",
             image:
-                "https://github.com/1UDIT/Portfolio/blob/Added-Project-list/Images/Iplaey.png?raw=true",
+                "https://github.com/1UDIT/Portfolio/blob/4.0_Icon-Added/Images/Blog.png?raw=true",
             project_desc:
                 "schedule of Anime",
             deploy_link: "https://animexzone.netlify.app/",
@@ -60,12 +60,29 @@ const Project = () => {
             tech_stack: [
                 <FaHtml5 />,
                 <FaCss3 />,
-                <FaJs />, 
+                <FaJs />,
+                <SiNextdotjs />
+            ]
+        },
+        {
+            id: 5,
+            project_name: "Shopping Cart",
+            image:
+                "https://github.com/1UDIT/Portfolio/blob/4.0_Icon-Added/Images/Blog.png?raw=true",
+            project_desc:
+                "Simple Cart using Next js And redux ",
+            deploy_link: null,
+            repo_link: "github.com/1UDIT/Shopping-Web-Nextjs",
+            tech_stack: [
+                <FaHtml5 />,
+                <FaCss3 />,
+                <FaJs />,
                 <SiNextdotjs />
             ]
         },
 
     ];
+     
     return (
         <>
             <div className="container-fluid text-center ProjectDetail p-4" id="Project">
@@ -81,7 +98,7 @@ const Project = () => {
                 </div>
                 <div className="row">
                     {projects.map((item) => (
-                        <div className="col-sm col-3" style={{ paddingTop: "50px" }}>
+                        <div className="col-sm-4 " style={{ paddingTop: "50px" }}>
 
                             <div className="card" style={{ width: "100%", height: "100%" }} key={item.id}>
                                 <img src={item.image} alt="icon" style={{ width: "100%" }} />
@@ -103,6 +120,7 @@ const Project = () => {
                         </div>
                     ))}
                 </div>
+                 
             </div >
             <ContactUs />
         </>
