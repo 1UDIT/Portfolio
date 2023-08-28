@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaLaptopCode } from "react-icons/fa";
-import { AiFillGithub } from "react-icons/ai";
-import { FaHtml5, FaReact, FaJs, FaCss3, FaNext } from "react-icons/fa";
-import { SiMongodb, SiNodeDotJs, SiRedux, SiNextdotjs } from "react-icons/si";
+import { FaHtml5, FaReact, FaJs, FaCss3 } from "react-icons/fa";
+import { SiMongodb, SiRedux, SiNextdotjs } from "react-icons/si";
 import ContactUs from "./ContactUs";
 
 const Project = () => {
-    const [buttonLeft, setButtonLeft] = useState({ display: 'none' });
-    const [buttonRight, setButtonRight] = useState({ display: 'none' });
     const projects = [
         {
             id: 1,
@@ -54,25 +51,26 @@ const Project = () => {
             image:
                 "https://github.com/1UDIT/Portfolio/blob/4.0_Icon-Added/Images/Blog.png?raw=true",
             project_desc:
-                "schedule of Anime",
+                "Blog Website",
             deploy_link: "https://animexzone.netlify.app/",
-            repo_link: "github.com/1UDIT/anime_x",
+            repo_link: "https://github.com/1UDIT/anime_x",
             tech_stack: [
                 <FaHtml5 />,
                 <FaCss3 />,
                 <FaJs />,
-                <SiNextdotjs />
+                <SiNextdotjs />,
+                <SiMongodb />
             ]
         },
         {
             id: 5,
             project_name: "Shopping Cart",
             image:
-                "https://github.com/1UDIT/Portfolio/blob/4.0_Icon-Added/Images/Blog.png?raw=true",
+                "https://github.com/1UDIT/Portfolio/blob/4.0_Icon-Added/Images/Shopping_Cart.png?raw=true",
             project_desc:
-                "Simple Cart using Next js And redux ",
+                "Simple Cart using Next js And Redux ",
             deploy_link: null,
-            repo_link: "github.com/1UDIT/Shopping-Web-Nextjs",
+            repo_link: "https://github.com/1UDIT/Shopping-Web-Nextjs",
             tech_stack: [
                 <FaHtml5 />,
                 <FaCss3 />,
@@ -82,7 +80,7 @@ const Project = () => {
         },
 
     ];
-     
+
     return (
         <>
             <div className="container-fluid text-center ProjectDetail p-4" id="Project">
@@ -97,30 +95,39 @@ const Project = () => {
                     </div>
                 </div>
                 <div className="row">
-                    {projects.map((item) => (
-                        <div className="col-sm-4 " style={{ paddingTop: "50px" }}>
+                    {projects.map((item, index) => { 
+                        return (
+                            <div key={item.id} className="col-sm-4 " style={{ paddingTop: "50px" }}>
+                                <div className="card" style={{ width: "100%", height: "100%" }} >
+                                    <img src={item.image} alt="icon" style={{ width: "100%" }} />
+                                    <div className="card-body" style={{ color: "black" }} >
+                                        <h5 className="card-title"> {item.project_name}</h5>
+                                        <p className="card-text"  >{item.project_desc}</p>
+                                        <p className="card-text" >{item.tech_stack}</p>
+                                        <div className="row" style={{ position: "absolute", bottom: "0px", left: "0px", right: "0px" }}>
+                                            {item.repo_link === null ? null :
+                                                <>
+                                                    <div className="col">
+                                                        <a href={item.repo_link} className="btn btn-primary">Code</a>
+                                                    </div>
+                                                </>
+                                            }
+                                            {item.deploy_link === null ? null :
+                                                <>
 
-                            <div className="card" style={{ width: "100%", height: "100%" }} key={item.id}>
-                                <img src={item.image} alt="icon" style={{ width: "100%" }} />
-                                <div className="card-body" style={{ color: "black" }} >
-
-                                    <h5 className="card-title"> {item.project_name}</h5>
-                                    <p className="card-text"  >{item.project_desc}</p>
-                                    <p className="card-text" >{item.tech_stack}</p>
-                                    {item.repo_link === null ? null : <div className="row" style={{ position: "absolute", bottom: "0px", left: "0px", right: "0px" }}>
-                                        <div className="col"   >
-                                            <a href={item.repo_link} className="btn btn-primary">Code</a>
+                                                    <div className="col"   >
+                                                        <a href={item.deploy_link} className="btn btn-primary">Demo</a>
+                                                    </div>
+                                                </>
+                                            }
                                         </div>
-                                        <div className="col"   >
-                                            <a href={item.deploy_link} className="btn btn-primary">Demo</a>
-                                        </div>
-                                    </div>}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
-                 
+
             </div >
             <ContactUs />
         </>

@@ -55,10 +55,10 @@ const Skill = () => {
         // },
     ];
     return (
-        <> 
-                <div className="container-fluid text-center" id="SkillDiv">
+        <>
+            <div className="container-fluid text-center" id="SkillDiv">
                 <div className="row" style={{ color: "red" }}>
-                    <div className="col-5" style={{ textAlign: "right",display:"inline-flex",justifyContent:"flex-end",alignItems:"center" }}>
+                    <div className="col-5" style={{ textAlign: "right", display: "inline-flex", justifyContent: "flex-end", alignItems: "center" }}>
                         <GoFileCode style={{ fontSize: "25px" }} />
                     </div>
                     <div className="col-5" style={{ textAlign: "left" }}>
@@ -66,10 +66,11 @@ const Skill = () => {
                             <span style={{ color: "white" }}>TECHNOLOGY</span>
                         </h2>
                     </div>
-                </div> 
-                    <div className="row colorTechnologies">
-                        {projects.map((item, index) => (
-                            <div className="col-4" style={{ marginTop: "130px", paddingLeft: "10px" }} key={index}>
+                </div>
+                <div className="row colorTechnologies">
+                    {projects.map((item, index) => {
+                        return (
+                            <div className="col-4" style={{ marginTop: "130px", paddingLeft: "10px" }} key={item.id}>
                                 <div className="colorTechnologies">
                                     <Slide direction={'up'}>
                                         {item.project_desc}
@@ -79,19 +80,11 @@ const Skill = () => {
                                     </Slide>
                                 </div>
                             </div>
-                        ))}
-
-                        {/* <div className="col" style={{ position: "relative", marginTop: "130px" }}>
-                        <Slide direction={'up'}>
-                            <h1 className="heading-name">
-
-                            </h1>
-                        </Slide>
-
-                    </div> */}
-                    </div>
-                </div> 
-            <Project/>
+                        )
+                    })} 
+                </div>
+            </div>
+            <Project />
         </>
     )
 }
