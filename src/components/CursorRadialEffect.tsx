@@ -40,14 +40,14 @@ export default function CursorRadialEffect({
 
 
     const radialGradientStyle: React.CSSProperties = {
-        background: `radial-gradient(100px  at ${mouseXpercentage}% ${mouseYpercentage}%, rgba(255, 106, 61, 0.5), transparent 70%)`,
+        background: `radial-gradient(1500px  at ${mouseXpercentage}% ${mouseYpercentage}%, rgba(255, 106, 61, 0.5), transparent 70%)`,
     };
 
     return (
 
         <div
             // rotate-180 for mirrored effect
-            className={`radial-gradient-styling absolute ${position} left-0 h-full w-full -z-[1]   ${opacity} ${scale} ${overflow}`}
+            className={`radial-gradient-styling fixed ${position} left-0 h-full w-full -z-[1]   ${opacity} ${scale} ${overflow}`}
             style={radialGradientStyle}
         ></div>
     )

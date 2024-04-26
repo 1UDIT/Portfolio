@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label"
 
 export default function ThemeSwitcher() {
     const { setTheme } = useTheme();
-    const Theme = localStorage.getItem("theme"); 
+    const Theme = localStorage.getItem("theme");  
     return (
         <ul className="flex items-center gap-2 2xsm:gap-4 md:block  hidden ">
             <li>

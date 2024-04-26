@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
@@ -43,7 +43,7 @@ export default function RootLayout({
           </main>
           <LazyRadialGradient
             opacity="opacity-50"
-            scale="scale-y-100"
+            scale="scale-y-150"
             position="-inset-0"
           />
         </ThemeProvider>
