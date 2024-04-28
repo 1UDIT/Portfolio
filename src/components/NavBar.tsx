@@ -22,7 +22,7 @@ export default function NavBar() {
                         </Link> 
                         <Link
                             className="font-medium text-sm border-b-2 border-transparent transition-colors hover:text-gray-900 hover:border-gray-100 dark:hover:text-gray-50 dark:hover:border-gray-800"
-                            href="#"
+                            href="/Skill"
                         >
                             Skill
                         </Link>

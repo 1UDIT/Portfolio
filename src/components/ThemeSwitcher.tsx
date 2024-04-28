@@ -1,13 +1,12 @@
-import { BsMoonStars } from "react-icons/bs";
-import { IoSunnyOutline } from "react-icons/io5";
+'use client'
+
 import { useTheme } from "next-themes"
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch"
-import { Label } from "@/components/ui/label"
+import { useEffect } from "react";
 
 export default function ThemeSwitcher() {
     const { setTheme } = useTheme();
-    const Theme = localStorage.getItem("theme");  
+    const Theme = typeof window !== "undefined" ? window.localStorage.getItem('theme') : false;
+
     return (
         <ul className="flex items-center gap-2 2xsm:gap-4 md:block  hidden ">
             <li>

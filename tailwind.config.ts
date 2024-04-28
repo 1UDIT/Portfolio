@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -67,10 +67,46 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "wave": {
+          '0%': {
+            transform: "rotate(0.0deg)"
+          },
+
+          '10%': {
+            transform: "rotate(14.0deg)"
+          },
+
+          /* The following five values can be played with to make the waving more or less extreme */
+          '20% ': {
+            transform: "rotate(-8.0deg)"
+          },
+
+          '30%': {
+            transform: "rotate(14.0deg)"
+          },
+
+          '40%': {
+            transform: "rotate(-4.0deg)"
+          },
+
+          '50%': {
+            transform: ' rotate(10.0deg)'
+          },
+
+          '60%': {
+            transform: 'rotate(0.0deg)'
+          },
+
+          /* Reset for the last half to pause */
+          '100%': {
+            transform: 'rotate(0.0deg)'
+          },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "wave": "wave 2.1s ease-in-out infinite"
       },
     },
   },
