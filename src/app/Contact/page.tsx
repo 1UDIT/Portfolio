@@ -16,7 +16,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Card } from '@/components/ui/card';
-import { useToast } from '@/components/ui/UseToast'; 
+import { useToast } from '@/components/ui/UseToast';  
 
 const FormSchema = z.object({
     username: z.string().min(2, {
@@ -27,7 +27,7 @@ const FormSchema = z.object({
     }),
 })
 
-export default function page() {
+export default function Page() {
     const { toast } = useToast();
 
     const form = useForm<z.infer<typeof FormSchema>>({
