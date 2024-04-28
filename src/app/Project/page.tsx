@@ -12,6 +12,7 @@ import GetDataCall from "./getData"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { Fragment } from "react";
 
 export default function page() {
     const data = [...GetDataCall];
@@ -19,35 +20,37 @@ export default function page() {
         <div className="grid grid-cols-1 md:grid-cols-2 z-[1] lg:grid-cols-3 dark:text-white justify-items-center">
             {
                 data?.map((Value, index) => {
-                    // console.log(Value.Code.keys, "value", data)
+                    // console.log(Value.Index, "value", data)
                     const Icon = Value.Code;
                     return (
-                        <div className='cols-1 px-7 py-7' key={Value.Index}>
-                            <Card className="w-[350px] h-full">
-                                <CardHeader>
-                                    <CardTitle>{Value.Name}</CardTitle>
-                                    <CardDescription>
-                                        <Link href={Value.Link}>
-                                            <Button variant={"ghost"}>Repositorie</Button>
-                                        </Link>
-                                        {Value.Preview !== '' ?
-                                            <Link href={Value.Preview}>
-                                                <Button variant={"ghost"}>Live Preview</Button>
-                                            </Link> : null}
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <Image src={Value.Image}
-                                        priority={true}
-                                        width={500}
-                                        height={100}
-                                        alt={Value.Name} style={{height:"150px",objectFit: "cover"}}/>
-                                </CardContent>
-                                <CardFooter>
-                                    {Icon}
-                                </CardFooter>
-                            </Card>
-                        </div>
+                        <Fragment key={Value.Index}>
+                            <div className='cols-1 px-7 py-7' >
+                                <Card className="w-[350px] h-full">
+                                    <CardHeader>
+                                        <CardTitle>{Value.Name}</CardTitle>
+                                        <CardDescription>
+                                            <Link href={Value.Link}>
+                                                <Button variant={"ghost"}>Repositorie</Button>
+                                            </Link>
+                                            {Value.Preview !== '' ?
+                                                <Link href={Value.Preview}>
+                                                    <Button variant={"ghost"}>Live Preview</Button>
+                                                </Link> : null}
+                                        </CardDescription>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <Image src={Value.Image}
+                                            priority={true}
+                                            width={500}
+                                            height={100}
+                                            alt={Value.Name} style={{ height: "150px", objectFit: "cover" }} />
+                                    </CardContent>
+                                    <CardFooter>
+                                        {Value.Code}
+                                    </CardFooter>
+                                </Card>
+                            </div>
+                        </Fragment>
                     )
                 })
             }

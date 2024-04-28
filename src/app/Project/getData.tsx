@@ -3,90 +3,90 @@ import { SiShadcnui, SiNextdotjs, SiSocketdotio, SiRedux } from "react-icons/si"
 import { TbBrandReactNative } from "react-icons/tb"; 
 import { DiMongodb } from "react-icons/di";
 type Api = {
-    Index: string
+    Index: number
     Image: string
     Name: string
     Link: string
     Preview: string
-    Code: React.ReactNode[]
+    Code: React.ReactElement[] 
     indexIcon:string
 };
 
 const GetDataCall: Api[] = [
     {
-        Index: "1",
+        Index: 1,
         Image: `/img/AdminDashbord.png`,
         Name: 'Admin_DashBoard',
         Link: "https://github.com/1UDIT/Admin_DashBoard",
         Preview: "https://github.com/1UDIT/Admin_DashBoard",
         Code: [
-            <FaReact className="h-6 w-12 "/>, <SiShadcnui className="h-6 w-12"/>
+            <FaReact key="FaReact" className="h-6 w-12 "/>, <SiShadcnui key="SiShadcnui" className="h-6 w-12"/>
         ],
         indexIcon:"B"
     },
     {
-        Index: "2",
+        Index: 2,
         Image: `/img/ReactNative.png`,
         Name: 'android-app',
         Link: "https://github.com/1UDIT/android-app",
         Preview: '',
         Code: [
-            <TbBrandReactNative className="h-6 w-12 "/>, <SiRedux className="h-6 w-12 "/>
+            <TbBrandReactNative key="TbBrandReactNative"  className="h-6 w-12 "/>, <SiRedux key="SiRedux" className="h-6 w-12 "/>
         ],
         indexIcon:"C"
     },
     {
-        Index: "3",
+        Index: 3,
         Image: `/img/Authentication_Nextjs.png`,
         Name: 'Authentication_Nextjs',
         Link: "https://github.com/1UDIT/Authentication_Nextjs",
         Preview: "https://github.com/1UDIT/android-app",
         Code: [
-            <SiNextdotjs className="h-6 w-12 "/>, "Auth.Js"
+            <SiNextdotjs key="SiNextdotjs" className="h-6 w-12 "/>
         ],
         indexIcon:"D"
     },
     {
-        Index: "4",
+        Index: 4,
         Image: `/img/nextjs.png`,
         Name: 'NextJs-connect-mongoDB-and-cloudinary',
         Link: "https://github.com/1UDIT/NextJs-connect-mongoDB-and-cloudinary",
         Preview: '',
         Code: [
-            <FaNode className="h-6 w-12 "/>, <DiMongodb className="h-6 w-12 "/>
+            <FaNode key="FaNode" className="h-6 w-12 "/>, <DiMongodb key="DiMongodb" className="h-6 w-12 "/>
         ],
         indexIcon:"E"
     },
     {
-        Index: "5",
+        Index: 5,
         Image: `/img/Socket.png`,
         Name: 'Socket.io-Node-js',
         Link: "https://github.com/1UDIT/Socket.io-Node-js",
         Preview: '',
         Code: [
-            <FaNode className="h-6 w-12 "/>, <SiSocketdotio className="h-6 w-12 "/>
+            <FaNode key="FaNode" className="h-6 w-12 "/>, <SiSocketdotio key="SiSocketdotio" className="h-6 w-12 "/>
         ],
         indexIcon:"A"
     },
     {
-        Index: "6",
+        Index: 6,
         Image: `/img/modi.avif`,
         Name: 'Shopping-Web-Nextjs',
         Link: "https://github.com/1UDIT/Shopping-Web-Nextjs",
         Preview: "https://github.com/1UDIT/android-app",
         Code: [
-            <SiNextdotjs className="h-6 w-12 "/>, <SiRedux className="h-6 w-12 "/>
+            <SiNextdotjs key="SiNextdotjs" className="h-6 w-12 "/>, <SiRedux key="SiRedux" className="h-6 w-12 "/>
         ],
         indexIcon:"F"
     },
     {
-        Index: "7",
+        Index: 7,
         Image: `/img/NextjsMongodb.png`,
         Name: 'Blog Website',
         Link: "https://github.com/1UDIT/anime_x",
         Preview: 'https://anime-x-u121.vercel.app/',
         Code: [
-            <SiNextdotjs className="h-6 w-12 "/>, <DiMongodb className="h-6 w-12 "/>
+            <SiNextdotjs  key="SiNextdotjs" className="h-6 w-12 "/>, <DiMongodb  key="DiMongodb" className="h-6 w-12 "/>
         ],
         indexIcon:"G"
     },
