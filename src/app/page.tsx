@@ -1,7 +1,6 @@
 'use client'
 
-import Image from 'next/image';
-import { useEffect } from 'react';
+import Image from 'next/image'; 
 import Typewriter from 'typewriter-effect';  
 
 export default function Home() { 
@@ -10,7 +9,7 @@ export default function Home() {
     <div className="grid grid-cols-2 gap-4 dark:text-white">
       <div className='py-20 text-center'>
         <h1 className="text-4xl">
-          Hi There! I'm Udit Sharma
+          Hi There! I&apos;m Udit Sharma
           <span className="animate-wave inline-block" role="img" aria-labelledby="wave">
             👋🏻
           </span>

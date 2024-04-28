@@ -16,8 +16,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Card } from '@/components/ui/card';
-import { useToast } from '@/components/ui/use-toast';
-import { ToastAction } from '@/components/ui/toast';
+import { useToast } from '@/components/ui/UseToast'; 
 
 const FormSchema = z.object({
     username: z.string().min(2, {
