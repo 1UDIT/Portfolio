@@ -8,7 +8,7 @@ export default function ThemeSwitcher() {
     const Theme = typeof window !== "undefined" ? window.localStorage.getItem('theme') : false;
 
     return (
-        <ul className="flex items-center gap-2 2xsm:gap-4 md:block  hidden ">
+        <ul className="flex items-center gap-2 2xsm:gap-4">
             <li>
                 <label
                     className={`relative m-0 block h-7.5 w-14 rounded-full`}

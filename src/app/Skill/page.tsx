@@ -15,21 +15,21 @@ export default function page() {
     const data = [...SkillApi];
     return (
         <Card className="mx-7 my-7">
-            <div className="grid grid-cols-2   z-[1]  dark:text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2   z-[1]  dark:text-white">
                 {
                     data?.map((Value, index) => {
                         // console.log(Value.Code.keys, "value", data) 
                         return (
-                            <div className='cols-1 px-7 py-7' key={Value.Index}>
+                            <div className='cols-1 px2 py-2 md:px-7 md:py-7' key={Value.Index}>
                                 <CardHeader >
                                     <CardTitle>
-                                        <div className="grid grid-cols-2   z-[1]  dark:text-white">
+                                        <div className="grid grid-cols-2  z-[1]  dark:text-white">
                                             <span className=" cols-1">{Value.Name}</span>
-                                            <span className=" cols-1">{Value.Progress}%</span>
+                                            <span className=" cols-1 text-right md:text-left">{Value.Progress}%</span>
                                         </div>
-                                    </CardTitle> 
+                                    </CardTitle>
                                     <CardTitle>
-                                        <Progress value={Value.Progress} className="w-[60%]" />
+                                        <Progress value={Value.Progress} className=" w-full md:w-[60%]" />
                                     </CardTitle>
                                 </CardHeader>
                             </div>
