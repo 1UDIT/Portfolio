@@ -70,10 +70,10 @@ const GetDataCall: Api[] = [
     },
     {
         Index: 6,
-        Image: `/img/modi.avif`,
+        Image: `/img/Shopping.png`,
         Name: 'Shopping-Web-Nextjs',
         Link: "https://github.com/1UDIT/Shopping-Web-Nextjs",
-        Preview: "https://github.com/1UDIT/android-app",
+        Preview: "https://shopping-web-nextjs.vercel.app/",
         Code: [
             <SiNextdotjs key="SiNextdotjs" className="h-6 w-12 "/>, <SiRedux key="SiRedux" className="h-6 w-12 "/>
         ],
@@ -89,6 +89,17 @@ const GetDataCall: Api[] = [
             <SiNextdotjs  key="SiNextdotjs" className="h-6 w-12 "/>, <DiMongodb  key="DiMongodb" className="h-6 w-12 "/>
         ],
         indexIcon:"G"
+    },
+    {
+        Index: 8,
+        Image: `/img/Feedback.png`,
+        Name: 'FeedBack Web',
+        Link: "https://github.com/1UDIT/chatBox",
+        Preview: 'https://feedbackchat.vercel.app/',
+        Code: [
+            <SiNextdotjs  key="SiNextdotjs" className="h-6 w-12 "/>, <DiMongodb  key="DiMongodb" className="h-6 w-12 "/>
+        ],
+        indexIcon:"H"
     },
 ]
 export default GetDataCall;
