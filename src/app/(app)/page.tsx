@@ -97,6 +97,13 @@ const tech = [
 
 export default function Home() {
 
+  const downloadFile = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "resume.pdf";
+    link.click();
+  };
+
   return (
     <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full items-center">
       <section className='snap-start min-h-screen  '>
@@ -124,6 +131,7 @@ export default function Home() {
                 Hire Me
               </Button>
               <Button
+                onClick={downloadFile}
                 className='hover:bg-[#ff6600] bg-transparent border-2 border-[#ff6600] px-6 py-6 rounded-lg hover:text-white text-[#ff6600]
                              hover:bg-[#e65c00] transition-all duration-300 hover:shadow-lg hover:shadow-[#ff6600]/20 text-xl transition-all duration-300'>
                 Download Resume
