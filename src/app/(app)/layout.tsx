@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils"; 
+import { Inter as FontSans } from "next/font/google"; 
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
+import NavBar from "@/components/NavBar";
 import CursorRadialEffect from "@/components/CursorRadialEffect";
 
 const fontSans = FontSans({
@@ -26,10 +27,18 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <main className="relative snap-y snap-mandatory">
-          {children}
-        </main>
-        <CursorRadialEffect />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="relative snap-y snap-mandatory">
+            <NavBar />
+            {children}
+          </main>
+          <CursorRadialEffect />
+        </ThemeProvider>
       </body>
     </html>
   );

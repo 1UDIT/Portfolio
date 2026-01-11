@@ -1,17 +1,21 @@
 'use client'
 
-import { useTheme } from "next-themes"
-import { useEffect } from "react";
+import { useTheme } from "next-themes" 
+import clsx from "clsx";
 
-export default function ThemeSwitcher() {
+type ThemeSwitcherProps = {
+  className?: string;
+};
+
+export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
     const { setTheme } = useTheme();
     const Theme = typeof window !== "undefined" ? window.localStorage.getItem('theme') : false;
 
     return (
-        <ul className="flex items-center gap-2 2xsm:gap-4">
+        <ul className="flex items-center gap-2 2xsm:gap-4 ">
             <li>
                 <label
-                    className={`relative m-0 block h-7.5 w-14 rounded-full`}
+                    className={clsx(`relative m-0 block h-7.5 w-14 rounded-full`,className)}
                 >
                     <input
                         type="checkbox"

@@ -1,54 +1,42 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useRef } from "react"
 
-interface RadialGradientProps {
-    scale: string;
-    opacity: string;
-    position?: string;
-    overflow?: string;
-}
+export default function CursorRadialEffect() {
+  const glowRef = useRef<HTMLDivElement>(null)
 
-export default function CursorRadialEffect({
-    scale,
-    opacity,
-    position,
-    overflow,
-}: RadialGradientProps) {
-    const [mouseXpercentage, setMouseXPercentage] = useState<number>(0);
-    const [mouseYpercentage, setMouseYPercentage] = useState<number>(0);
+  useEffect(() => {
+    const move = (e: MouseEvent) => {
+      if (!glowRef.current) return
 
-    useEffect(() => {
-        const handleMouseMove = (event: MouseEvent) => {
-            const windowWidth = window.innerWidth;
-            const windowHeight = window.innerHeight;
-            const newMouseXPercentage = Math.round((event.pageX / windowWidth) * 100);
-            const newMouseYPercentage = Math.round(
-                (event.pageY / windowHeight) * 100
-            );
+      glowRef.current.style.transform = `translate3d(
+        ${e.clientX - 120}px,
+        ${e.clientY - 120}px,
+        0
+      )`
+    }
 
-            setMouseXPercentage(newMouseXPercentage);
-            setMouseYPercentage(newMouseYPercentage);
-        };
+    window.addEventListener("mousemove", move)
+    return () => window.removeEventListener("mousemove", move)
+  }, [])
 
-        document.addEventListener("mousemove", handleMouseMove);
-
-        return () => {
-            document.removeEventListener("mousemove", handleMouseMove);
-        };
-    }, []);
-
-
-    const radialGradientStyle: React.CSSProperties = {
-        background: `radial-gradient(1500px  at ${mouseXpercentage}% ${mouseYpercentage}%, rgba(255, 106, 61, 0.5), transparent 70%)`,
-    };
-
-    return (
-
-        <div
-            // rotate-180 for mirrored effect
-            className={`radial-gradient-styling fixed ${position} left-0 h-full w-full -z-[1]   ${opacity} ${scale} ${overflow}`}
-            style={radialGradientStyle}
-        ></div>
-    )
+  return (
+    <div className="fixed inset-0 pointer-events-none -z-[1]">
+      <div
+        ref={glowRef}
+        className="absolute rounded-full blur-3xl"
+        style={{
+          width: 240,
+          height: 240,
+          background: `radial-gradient(
+            circle,
+            rgba(255,106,61,0.8) 0%,
+            rgba(255,106,61,0.35) 35%,
+            transparent 70%
+          )`,
+          willChange: "transform",
+        }}
+      />
+    </div>
+  )
 }

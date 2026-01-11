@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/card"
 import GetDataCall from "./getData"
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import { Fragment } from "react";
 
@@ -19,24 +18,38 @@ export default function page() {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 z-[1] lg:grid-cols-3 dark:text-white justify-items-center">
             {
-                data?.map((Value, index) => {
+                data?.map((Value) => {
                     // console.log(Value.Index, "value", data)
                     const Icon = Value.Code;
                     return (
                         <Fragment key={Value.Index}>
                             <div className='cols-1 px-7 py-7' >
-                                <Card className="w-[350px] h-full">
+                                <Card className="w-[350px] h-full dark:bg-gray-700 border-2 border-[#ff6600] transition-all duration-300 hover:shadow-lg hover:shadow-[#ff6600]/20">
                                     <CardHeader>
                                         <CardTitle>{Value.Name}</CardTitle>
-                                        <CardDescription>
-                                            <Link href={Value.Link}>
-                                                <Button variant={"ghost"}>Repositorie</Button>
-                                            </Link>
+                                        <div className="container py-2">
+                                            <span className="px-2">
+                                                <Button
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        window.open(Value.Link, "_blank", "noopener,noreferrer");
+                                                    }}
+                                                    variant="ghost"
+                                                    className="rounded-md border-2 border-slate-400"
+                                                >
+                                                    Repositorie
+                                                </Button>
+                                            </span>
                                             {Value.Preview !== '' ?
-                                                <Link href={Value.Preview}>
-                                                    <Button variant={"ghost"}>Live Preview</Button>
-                                                </Link> : null}
-                                        </CardDescription>
+                                                <Button onClick={(e) => {
+                                                    e.preventDefault();
+                                                    window.open(Value.Preview, "_blank", "noopener,noreferrer");
+                                                }}
+                                                    variant="ghost"
+                                                    className="rounded-md border-2 border-slate-400"
+                                                >Live Preview</Button>
+                                                : null}
+                                        </div>
                                     </CardHeader>
                                     <CardContent>
                                         <Image src={Value.Image}

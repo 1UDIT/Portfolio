@@ -1,145 +1,117 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+@custom-variant dark (&:where(.dark, .dark *));
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
+@theme {
+    --animate-wave: wave 2.1s ease-in-out infinite;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
+:root {
+  --scrollbar-color: #ff6600; /* red */
 }
 
+@keyframes wave {
+    0% {
+        transform: rotate(0.0deg)
+    }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100%{
+        transform: rotate(0.0deg)
+    }
 }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  background-color: rgb(5, 5, 5); 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 10px;
+}
+
 
 .logo {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .menu-toggle {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .hamburger {
-  width: 25px;
-  height: 3px; 
-  position: relative;
+    width: 25px;
+    height: 3px;
+    position: relative;
 }
 
 .hamburger::before,
 .hamburger::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 3px; 
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
 }
 
 .hamburger::before {
-  top: -8px;
+    top: -8px;
 }
 
 .hamburger::after {
-  top: 8px;
+    top: 8px;
 }
 
 .menu {
-  position: absolute;
-  top: 0px;
-  /* Adjust as needed */
-  right: 0px;
-  padding: 10px;
-  border-radius: 5px;
-  list-style-type: none;
-  width: 190px;
+    position: absolute;
+    top: 0px;
+    /* Adjust as needed */
+    right: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    list-style-type: none;
+    width: 190px;
 }
 
 .menu li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .menu li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 /* Media query for mobile */
 @media (max-width: 768px) {
-  .menu {
-    top: 60px;
-  }
+    .menu {
+        top: 60px;
+    }
 }
